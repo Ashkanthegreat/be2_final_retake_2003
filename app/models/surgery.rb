@@ -8,5 +8,10 @@ class Surgery < ApplicationRecord
                         :day_of_week,
                         :operating_room_number
 
+  def count_of_doctors
+    doctors.count
+  end
+
+
 
 end

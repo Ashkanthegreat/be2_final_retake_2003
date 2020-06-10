@@ -1,7 +1,7 @@
 <h1>All Surgeries </h1>
 
 <% @surgeries.each do |surgery| %>
-    <%= surgery.title%>
+     <%= link_to "#{surgery.title}", surgery_path(surgery.id) %>
 <% end %>
 
 <p><%= link_to "Add Surgery", "/surgeries/new" %></p>
