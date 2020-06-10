@@ -1,0 +1,17 @@
+<h1><%= "Schedule New Surgery" %></h1>
+
+<center>
+  <%= form_for @surgery do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title  %>
+
+  <%= f.label :day_of_week, "Day of Week" %>
+  <%= f.text_field :day_of_week %>
+
+  <%= f.label :operating_room_number, "Operating Room Number" %>
+  <%= f.text_field :operating_room_number %>
+
+  <%= f.submit %>
+<% end %>
+</center>

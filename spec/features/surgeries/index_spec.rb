@@ -16,16 +16,16 @@ RSpec.describe "Surgeries Index Page" do
 
     click_on "Add Surgery"
 
+    expect(current_path).to eq("/surgeries/new")
+
+    fill_in "Title", with: "Back Surgery"
+    fill_in "Day of Week", with: "Monday"
+    fill_in "Operating Room Number", with: 210
+
+    click_on "Create Surgery"
+
+    expect(current_path).to eq("/surgeries")
+
+
   end
 end
-
-
-
-
-# I also see a link to add a surgery
-# When I click that link
-# I’m taken to a new form to create a surgery
-# When I fill in the form with a title, day of the week, and operating room number
-# And hit submit
-# I am taken back to the surgeries index page where I can see this new surgery’s title listed
-# ​
